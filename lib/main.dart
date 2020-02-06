@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:carousel_pro/carousel_pro.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -15,8 +16,13 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    Widget image_carousel = new Container(
+      height: ,
+    );
+
     return Scaffold(
       appBar: new AppBar(
+        elevation: 10.0,
         backgroundColor: Colors.red,
         title: Text(
           'Shop App',
@@ -110,7 +116,7 @@ class _HomePageState extends State<HomePage> {
               onTap: (){},
               child: ListTile(
                 title: Text('Settings'),
-                leading: Icon(Icons.settings, color: Colors.red,),
+                leading: Icon(Icons.settings, color: Colors.blue,),
 
               ),
             ),
@@ -119,7 +125,7 @@ class _HomePageState extends State<HomePage> {
               onTap: (){},
               child: ListTile(
                 title: Text('About'),
-                leading: Icon(Icons.help, color: Colors.red,),
+                leading: Icon(Icons.help, color: Colors.green,),
 
               ),
             ),
