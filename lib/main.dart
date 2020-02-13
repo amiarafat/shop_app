@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 
+//My own Import
+import 'package:shop_app/components/horizotal_listview.dart';
+
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
@@ -29,10 +32,10 @@ class _HomePageState extends State<HomePage> {
           AssetImage('images/w4.jpeg'),
           AssetImage('images/IMG_1266.JPG'),
         ],
-        autoplay: false,
+        autoplay: true,
         animationCurve: Curves.fastOutSlowIn,
         animationDuration: Duration(milliseconds: 2000),
-        dotSize: 4.0,
+        dotSize: 6.0,
       ),
     );
 
@@ -152,9 +155,20 @@ class _HomePageState extends State<HomePage> {
 
       body: new ListView(
         children: <Widget>[
-          image_carousel
+          //image carousel
+          image_carousel,
+
+          //padding widget
+          new Padding(padding: const EdgeInsets.all(6.0),
+          child: new Text('Categories'),
+          ),
+
+          //Horizontal list view
+          HorizontalList(),
+
         ],
       ),
     );
   }
 }
+
