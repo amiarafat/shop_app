@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/components/Products.dart';
 
 class ProductDetails extends StatefulWidget {
   final product_detail_name;
@@ -259,6 +260,15 @@ class _ProductDetailsState extends State<ProductDetails> {
               ),
             ],
           ),
+
+          new Divider(),
+
+          new Padding(padding: const EdgeInsets.all(8.0),
+          child: new Text("Similar Products", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),),
+          ),
+
+
+
         ],
       ),
     );
